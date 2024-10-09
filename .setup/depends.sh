@@ -8,7 +8,7 @@ for pkg in "${packages[@]}"
 do
     # Check if package is installed
     if ! (dpkg -l | grep -q "^ii  $pkg "); then
-        [[ $aa == true ]] && apt update && aa=false
+        $aa && apt update && aa=false
         apt -qq install $pkg -yq # silent mode
         # not need nginx at this project for now
         # [[ $pkg == "nginx" ]] && soruce .setup/nginx.sh
