@@ -1,0 +1,54 @@
+# Ignore virtual environment directory
+venv/
+ENV/
+env/
+lib/
+bin/
+pyvenv.cfg
+
+# Ignore Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore logs, databases, and other temporary files
+*.log
+*.sqlite3
+*.db
+*.sql
+*.bak
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore compiled C extensions
+*.so
+
+# Ignore test results
+coverage/
+*.cover
+*.py,cover
+.hypothesis/
+
+# Ignore distributions
+*.egg
+*.egg-info/
+dist/
+build/
+wheels/
+
+# Ignore pipenv and poetry files
+Pipfile.lock
+poetry.lock
+
+# Ignore IDE settings
+.idea/
+.vscode/
+*.swp
+
+# Ignore pyenv
+.python-version
