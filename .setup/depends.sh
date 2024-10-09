@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # List of packages to check
-packages=("python3" "python3-flask" "wget" "net-tools" "openssh-client" "curl" "python3-pip" "nginx" "ncurses")
+packages=("python3" "python3-flask" "wget" "net-tools" "openssh-client" "curl" "python3-pip" "ncurses*")
 aa=true
 # Loop through each package
 for pkg in "${packages[@]}"
