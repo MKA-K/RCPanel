@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # List of packages to check
-packages=("python3" "python3-flask" "wget" "net-tools" "openssh-client" "curl" "python3-pip" "ncurses*")
+packages=("python3" "wget" "net-tools" "openssh-client" "curl" "python3-pip" "ncurses*")
 aa=true
 # Loop through each package
 for pkg in "${packages[@]}"
@@ -14,3 +14,5 @@ do
         # [[ $pkg == "nginx" ]] && soruce .setup/nginx.sh
     fi
 done
+
+pip install flask

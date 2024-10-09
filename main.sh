@@ -1,5 +1,5 @@
 source .src/logging.lib
-source .setup/depends.sh
+#source .setup/depends.sh
 
 #----------------------------------------------------------------
 

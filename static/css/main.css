@@ -1,0 +1,70 @@
+/* Set body and html height to full screen */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------------Layers---------------------------*/
+
+/* Layer 1 styles */
+.layer1 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+/* Layer 2: Full-screen overlay for logs*/
+.layer2 {
+    position: fixed; /* Ensures the layer covers the whole viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent; /* Semi-transparent white overlay */
+    display: flex;
+    justify-content: center;
+    z-index: 2; /* Above Layer 1 */
+}
+
+.layer2 iframe {
+    width: 100%; /* Adjust width as needed */
+    height: 100%; /* Adjust height as needed */
+    border-radius: 10px;
+    background: transparent;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 3; /* Ensures iframe stays on top of the blur effect */
+}
+
+/* Layer 3: Full-screen overlay */
+.layer3 {
+    position: fixed; /* Ensures the layer covers the whole viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent white overlay */
+    backdrop-filter: blur(10px); /* Blur effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3; /* Above Layer 2 */
+}
+
