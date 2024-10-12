@@ -24,7 +24,9 @@
         <button class="octo stop1" id="stop1" onclick="activateButton('stop1')">N</button>
         <button class="octo octo_PASSIVE" id="r1" onclick="activateButton('r1')">R</button>
     </div>
-    <div class="column large"></div>
+    <div class="column large">
+        <iframe src="{{ url_for('static', filename='videos/the-toyota.mp4') }}" frameborder="0" allowfullscreen></iframe>
+    </div>
     <div class="column small">
         <button class="octo octo_PASSIVE" id="d2" onclick="activateButton('d2')">D</button>
         <button class="octo stop2" id="stop2" onclick="activateButton('stop2')">N</button>

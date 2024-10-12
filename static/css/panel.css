@@ -62,20 +62,28 @@ html{
     background-color: transparent;
     border-color: #999;
     border-width: 3px;
-    border-style: dotted;
+    /*border-style: dotted;*/
     text-align: center;
     align-content: center;
     justify-content: center;
     margin: 0 10px;
     height: 100%; /* Sütunların %100 yüksekliği */
 }
+
 .small {
     flex: 0.2; /* Küçük sütunlar */
 }
 .large {
     flex: 1; /* Büyük sütun (ortadaki) */
 }
-
+.column.large iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
 
 /*Button*/
 .octo {
@@ -92,6 +100,7 @@ html{
   clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
   overflow: hidden;
   margin-top: 10px;
+  z-index: 2;
 }
 .octo:before {
   content: "";
