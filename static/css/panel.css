@@ -1,0 +1,161 @@
+@font-face {
+  font-family: 'Anurati';
+  src: url('/static/fonts/Anurati-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html{
+    --shield-background:#252C37;
+    --border:cyan;
+    --skew:-45deg;
+    --inverse-skew:45deg;
+  }
+  html,body{background-image: url(/image/backgroundwp.png);margin:0;padding:0}
+  header,footer{position:fixed;width:100vw;z-index:100;}
+  header{top:0;}
+  footer{bottom:0;}
+  .box{height:46vh;width:100%;background:var(--shield-background);transition:ease-out all 0.5s;transition-delay:0.5s;}
+  .ready .box{height:3vh;}
+  .curve{display:flex;width:100%;height:4vh;}
+  .left,.right{width:50%;height:100%;background:var(--shield-background);position:relative;}
+  .center{width:0;height:100%;transition:ease-out all 0.5s;}
+  header .left,header .right{border-bottom:1px solid var(--border);}
+  header.ready .center{width:100%;border-top:1px solid var(--border);}
+  .left > div:nth-child(1),.right > div:nth-child(1){position:absolute;width:100%;height:100%;background:var(--shield-background);}
+  header.ready .left > div:nth-child(1){transform:skew(var(--skew)) translateX(6%);border-right:1px solid var(--border);border-bottom:1px solid var(--border);}
+  header.ready .right > div:nth-child(1){transform:skew(var(--inverse-skew)) translateX(-6.8%);border-left:1px solid var(--border);border-bottom:1px solid var(--border);}
+  footer.ready .left > div:nth-child(1){transform:skew(var(--inverse-skew)) translateX(6%);border-right:1px solid var(--border);border-top:1px solid var(--border);}
+  footer.ready .right > div:nth-child(1){transform:skew(var(--skew)) translateX(-6.8%);border-left:1px solid var(--border);border-top:1px solid var(--border);}
+  footer.ready .center{width:100%;border-bottom:1px solid var(--border);}
+  footer.ready .right > div:nth-child(2){position:absolute;width:100%;height:100%;}
+  footer.ready .right > div:nth-child(2) > a{padding:1px 5px;position:relative;top:30%;margin:0 4px;color:white;transition:ease-out 0.5s all;transition-delay:2s;opacity:1 !important;}
+  footer.ready .right > div:nth-child(2) > a:hover{color:#999;}
+  footer .right > div:nth-child(2) > a{opacity:0;}
+
+
+/*Title layer*/
+.title {
+    position: absolute;
+    top: 6vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1em;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    z-index: 2;
+    font-family: 'Anurati', sans-serif;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding-top: 16vh;
+    padding-bottom: 16vh;
+    box-sizing: border-box; 
+}
+.column {
+    padding: 20px;
+    background-color: transparent;
+    border-color: #999;
+    border-width: 3px;
+    border-style: dotted;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    margin: 0 10px;
+    height: 100%; /* Sütunların %100 yüksekliği */
+}
+.small {
+    flex: 0.2; /* Küçük sütunlar */
+}
+.large {
+    flex: 1; /* Büyük sütun (ortadaki) */
+}
+
+
+/*Button*/
+.octo {
+  position: relative;
+  height: 20vh;
+  width: 20vh;
+  margin: 0 auto;
+  line-height: 20vh;
+  text-align: center;
+  border-radius: 41%;
+  font-size: 59px;
+  text-shadow: 1px 1px 13px rgba(84, 215, 217, 0.6);
+  -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  overflow: hidden;
+  margin-top: 10px;
+}
+.octo:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0A0A0A;
+  box-shadow: inset 0 0 45px -4px rgba(79, 204, 204, 0.84);
+  -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  border-radius: 41%;
+  transform: scale(0.95);
+}
+.octo:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://3sdgames.files.wordpress.com/2014/01/hex-transparent.png");
+  opacity: 0.2;
+  z-index: -1;
+  -webkit-filter: invert(1);
+  background-size: 240px auto;
+  background-position: center center;
+}
+
+.d1 {
+  /*background-color: #33FF57; /* Example background color for R1 */
+  color: rgba(51, 255, 87, 0.9); /* Example text color for R1 */
+}
+
+.stop1 {
+  /*background-color: #54D7D9; /* Base color */
+  color: rgba(255, 255, 0, 0.9); /* Example text color for STOP */
+}
+
+.r1 {
+  /*background-color: #FF5733; /* Example background color for STOP */
+  color: rgba(255, 87, 51, 0.9); /* Example text color for STOP */
+}
+
+.d2 {
+  /*background-color: #33FF57; /* Example background color for R1 */
+  color: rgba(51, 255, 87, 0.9); /* Example text color for R1 */
+}
+
+.stop2 {
+  /*background-color: #54D7D9; /* Base color */
+  /*color yellow */
+  color: rgba(255, 255, 0, 0.9); /* Example text color for STOP */
+}
+
+.r2 {
+  /*background-color: #FF5733; /* Example background color for STOP */
+  color: rgba(255, 87, 51, 0.9); /* Example text color for STOP */
+}
+
+.octo_PASSIVE {
+  background-color: #FFFFFF;
+  color: rgba(255, 255, 255, 0.9);
+  border: #FFFFFF;
+}

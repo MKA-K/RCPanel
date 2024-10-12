@@ -6,19 +6,11 @@
     <title>Layered HTML</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 </head>
-<body>
-
-
-
-
-    
-    <!--<div class="layer1">
-        <h1>This is the Background Layer (Layer 1)</h1>
-    </div>-->
-    <div class="layer2">
-        <iframe id="notifyiframe" src="" frameborder="0"></iframe>
+<body>    
+    <div class="layer1">
+        <iframe src="/panel" frameborder="0"></iframe>
     </div>
-    <div class="layer3" id="loading">
+    <div class="layer2" id="loading">
         <iframe src="/load/MKA - KΣ" frameborder="0"></iframe>
     </div>
 

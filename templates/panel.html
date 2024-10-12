@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/panel.css') }}">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<header>
+  <div class="box"></div>
+  <div class="curve">
+    <div class="left"><div></div></div>
+    <div class="center"></div>
+    <div class="right"><div></div></div>
+  </div>
+</header>
+
+<p class="title">WELCOME</p>
+
+<div class="container">
+    <div class="column small">
+        <button class="octo octo_PASSIVE" id="d1" onclick="activateButton('d1')">D</button>
+        <button class="octo stop1" id="stop1" onclick="activateButton('stop1')">N</button>
+        <button class="octo octo_PASSIVE" id="r1" onclick="activateButton('r1')">R</button>
+    </div>
+    <div class="column large"></div>
+    <div class="column small">
+        <button class="octo octo_PASSIVE" id="d2" onclick="activateButton('d2')">D</button>
+        <button class="octo stop2" id="stop2" onclick="activateButton('stop2')">N</button>
+        <button class="octo octo_PASSIVE" id="r2" onclick="activateButton('r2')">R</button>
+    </div>
+</div>
+
+<footer>
+  <div class="curve">
+    <div class="left">
+        <div></div>
+    </div>
+    <div class="center"></div>
+    <div class="right">
+        <div></div>
+    </div>
+  </div>
+  <div class="box"></div>
+</footer>
+<!-- partial -->
+  <script src="{{ url_for('static', filename='js/3.4.1Vjquery.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/panel.js') }}"></script>
+
+</body>
+</html>
