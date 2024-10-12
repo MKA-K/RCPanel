@@ -18,16 +18,24 @@
 
 <p class="title">WELCOME</p>
 
+<video autoplay class="video-container">
+    <source src="{{ url_for('static', filename='videos/demo1.mp4') }}" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+
 <div class="container">
     <div class="column small">
+        <p class="TiresTitle">Left Tires</p>
         <button class="octo octo_PASSIVE" id="d1" onclick="activateButton('d1')">D</button>
         <button class="octo stop1" id="stop1" onclick="activateButton('stop1')">N</button>
         <button class="octo octo_PASSIVE" id="r1" onclick="activateButton('r1')">R</button>
     </div>
     <div class="column large">
-        <iframe src="{{ url_for('static', filename='videos/the-toyota.mp4') }}" frameborder="0" allowfullscreen></iframe>
+        <p class="sensorvalues">The Sensors Values Will Be Here</p>
     </div>
     <div class="column small">
+        <p class="TiresTitle">Right Tires</p>
         <button class="octo octo_PASSIVE" id="d2" onclick="activateButton('d2')">D</button>
         <button class="octo stop2" id="stop2" onclick="activateButton('stop2')">N</button>
         <button class="octo octo_PASSIVE" id="r2" onclick="activateButton('r2')">R</button>
