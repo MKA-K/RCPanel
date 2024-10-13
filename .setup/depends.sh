@@ -15,4 +15,4 @@ do
     fi
 done
 
-pip install flask
+pip install flask opencv-python

@@ -28,16 +28,18 @@ Remote Control panel for MKA-KΣ Project
 # Hotspot Setup
 
     # Step 1: Create the hotspot
-    nmcli dev wifi hotspot ifname wlp4s0 ssid "MKA-KΣ S1" password "MKA.v1s1"
+    nmcli dev wifi hotspot ifname wlp4s0 con-name "hotspot" ssid "MKA-KΣ S1" band bg password "MKA.v1s1"
 
     # Step 2: Set static IP configuration
-    nmcli c modify "MKA-KΣ S1" 802-11-wireless-security.pmf disable
-    nmcli connection modify Hotspot ipv4.addresses 192.168.1.10/24
-    nmcli connection modify Hotspot ipv4.gateway 192.168.1.1 
-    nmcli connection modify Hotspot ipv4.dns ""
-    nmcli connection modify Hotspot ipv4.method manual
+    nmcli c modify hotspot 802-11-wireless-security.pmf 1
+    nmcli c modify hotspot 802-11-wireless-security.pmf disable
+    nmcli c modify hotspot ipv4.addresses 192.168.1.10/24
+    nmcli c modify hotspot ipv4.gateway 192.168.1.1 
+    nmcli c modify hotspot ipv4.dns ""
+    nmcli c modify hotspot ipv4.method manual
 
     # Step 3: Activate the hotspot (if not already activated)
-    nmcli connection up Hotspot
+    nmcli c down hotspot
+    nmcli c up hotspot
 
 
