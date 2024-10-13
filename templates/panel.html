@@ -18,11 +18,7 @@
 
 <p class="title">WELCOME</p>
 
-<video autoplay class="video-container">
-    <source src="{{ url_for('static', filename='videos/demo1.mp4') }}" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
-
+<img id="video-feed" src="{{ url_for('video_feed') }}" alt="Camera Feed">
 
 <div class="container">
     <div class="column small">
@@ -33,6 +29,7 @@
     </div>
     <div class="column large">
         <p class="sensorvalues">The Sensors Values Will Be Here</p>
+
     </div>
     <div class="column small">
         <p class="TiresTitle">Right Tires</p>
