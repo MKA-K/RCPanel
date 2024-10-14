@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request, send_from_directory, Response
-import cv2
+import cv2, configparser
 
+config = configparser.ConfigParser()
+config.read('.conf')
 app = Flask(__name__)
 
 @app.route('/')
@@ -26,9 +28,9 @@ def serve_iamge(filename):
 def generate_frames():
     cap = cv2.VideoCapture(0)
     
-    # Set camera resolution to 1080p
-    cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
-    cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
+    # Set camera resolution
+    cap.set(cv2.CAP_PROP_FRAME_WIDTH, config.get('General', 'resulationX'))
+    cap.set(cv2.CAP_PROP_FRAME_HEIGHT, config.get('General', 'resulationY'))
     
     while True:
         success, frame = cap.read()
