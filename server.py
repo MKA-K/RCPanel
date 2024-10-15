@@ -29,9 +29,9 @@ def generate_frames():
     cap = cv2.VideoCapture(0)
     
     # Set camera resolution
-    cap.set(cv2.CAP_PROP_FRAME_WIDTH, config.get('General', 'resulationX'))
-    cap.set(cv2.CAP_PROP_FRAME_HEIGHT, config.get('General', 'resulationY'))
-    
+    cap.set(cv2.CAP_PROP_FRAME_WIDTH, float(config.get('res', 'resulationX')))
+    cap.set(cv2.CAP_PROP_FRAME_HEIGHT, float(config.get('res', 'resulationY')))
+        
     while True:
         success, frame = cap.read()
         if not success:
