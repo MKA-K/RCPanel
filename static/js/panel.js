@@ -5,6 +5,9 @@ var elements;
 document.addEventListener("DOMContentLoaded", function() {
     var audio = new Audio('/sound/expand.wav');
     audio.play();
+    setTimeout(function() {
+        document.getElementById("loading").style.display = "none";
+    }, 2000);  
 });
 
 function activateButton(buttonId) {

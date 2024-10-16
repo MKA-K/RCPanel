@@ -34,6 +34,21 @@ html{
   footer .right > div:nth-child(2) > a{opacity:0;}
 
 
+.loader {
+    position: fixed; /* Ensures the layer covers the whole viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent; /* Semi-transparent white overlay */
+    backdrop-filter: blur(10px); /* Blur effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 101; /* Above Layer 1 */
+}
+
+  
 /*Title layer*/
 .title {
     position: absolute;
