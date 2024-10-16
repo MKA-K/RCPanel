@@ -5,6 +5,7 @@ env/
 lib/
 bin/
 pyvenv.cfg
+output.webm
 
 # Ignore Python bytecode
 __pycache__/
