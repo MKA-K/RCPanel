@@ -39,7 +39,7 @@ def generate_frames():
             break
         else:
             # Set JPEG quality for compression
-            encode_param = [int(cv2.IMWRITE_JPEG_QUALITY), 50]  # Düşük kalite ayarı
+            encode_param = [int(cv2.IMWRITE_JPEG_QUALITY), int(config.get('res', 'quality'))]
             ret, buffer = cv2.imencode('.jpg', frame, encode_param)
 
             frame = buffer.tobytes()
