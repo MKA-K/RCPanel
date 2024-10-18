@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, send_from_directory, Response
+from flask import Flask, render_template, request, send_from_directory, Response, jsonify
 import cv2, configparser
 
 config = configparser.ConfigParser()
