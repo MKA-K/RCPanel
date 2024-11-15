@@ -5,7 +5,7 @@
 source /tmp/logging.lib
 
 function run() {
-    if [[ command -v $1 ]]; then
+    if [[ $(command -v $1) ]]; then
         eval $@ &> /tmp/rcpanel-setup.log
         [[ $? == 1 ]] && log.error "An error accoured during process" && log.sub "CMD: $@" && log.sub "Log: /tmp/rcpanel-setup.log" && exit 1
     else
@@ -16,7 +16,7 @@ function run() {
 
 log.info "Installing depends..."
 
-if [[ command -v apt ]]; then
+if [[ $(command -v apt) ]]; then
     apt install -y python3 python3-pip python3.11-venv 2> /dev/null
 else
     pacman -Syu --needed python python-pip python-virtualenv 2> /dev/null
