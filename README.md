@@ -40,7 +40,7 @@ Remote Control panel for MKA-KΣ Project
 
 ## 2. Copy-Paste Setup
 
-    curl https://raw.githubusercontent.com/MKA-K/RCPanel/refs/heads/main/.setup/setup.sh | bash
+    curl -sSfL https://raw.githubusercontent.com/MKA-K/RCPanel/refs/heads/main/.setup/setup.sh | bash
 
 ## 3. Hotspot Setup
 
