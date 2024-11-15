@@ -25,6 +25,8 @@ fi
 log.info "Clonning Files via Git..."
 run git clone https://github.com/MKA-K/RCPanel.git
 
+sleep 0.1
+
 [[ ! -d ./RCPanel ]] && log.error "./RCPanel not found!" && exit 1
 
 log.info "Creating VENV..."
