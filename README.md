@@ -10,22 +10,39 @@ Remote Control panel for MKA-KΣ Project
 - Hotspot supported Wi-Fi adaptor.
 - Linux Based OS (EX. debian / arch)
 
-### Depends Installation (DEBIAN) 🛠️
+## 1. Setup
+
+### 1.1. Depends Installation (DEBIAN) 🛠️
 
     apt install -y python3 python3-pip python3.11-venv
 
-### Depends Installation (ARCH)   🛠️
+### 1.2. Depends Installation (ARCH)   🛠️
 
     pacman -Syu --needed python python-pip python-virtualenv
 
-### VENV And PIP Depends Setup
+### 1.3. Clone The Repo
+
+    git clone https://github.com/MKA-K/RCPanel.git
+
+### 1.4. Setup VENV And PIP Depends 
 
     python3 -m venv RCPanel
     source RCPanel/bin/activate
     pip install --upgrade pip
     pip install flask opencv-python
+    deactivate
 
-# Hotspot Setup
+### 1.5. Run Code (in RCPanel path)
+
+    bash main.sh
+
+---
+
+## 2. Copy-Paste-Run Setup
+
+    curl https://raw.githubusercontent.com/MKA-K/RCPanel/refs/heads/main/.setup/setup.sh | bash
+
+## 3. Hotspot Setup
 
     # Step 1: Create the hotspot
     nmcli device wifi hotspot ifname wlan0 con-name "hotspot" ssid "MKA-KΣ S1" password "MKA.v1s1"
