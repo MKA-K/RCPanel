@@ -5,3 +5,4 @@
 
     nmcli c down hotspot
     nmcli c up hotspot
+    
